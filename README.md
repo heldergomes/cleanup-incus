@@ -15,20 +15,20 @@ rm -rf ~/.config/incus/
 ## Bridges are remaining on environment?
 
 ### Check ip link and clean them up
-ip link show | grep incus
-sudo ip link delete incusbr0
+- ip link show | grep incus
+- sudo ip link delete incusbr0
 
 ## Mountpoints are remaining on environment?
 
 ### Check mountpoint and clean them up
-mount | grep incus
-sudo umount -l /var/lib/incus/guestapi
-sudo umount -l /var/lib/incus/shmounts
+- mount | grep incus
+- sudo umount -l /var/lib/incus/guestapi
+- sudo umount -l /var/lib/incus/shmounts
 
 ## nftables are remaining on environment?
 
 ### Check nftables and clean them up
-sudo nft list tables
-sudo nft delete table inet incus
-sudo nft delete table inet lxc
-sudo nft delete table ip lxc
+- sudo nft list tables
+- sudo nft delete table inet incus
+- sudo nft delete table inet lxc
+- sudo nft delete table ip lxc
